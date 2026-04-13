@@ -3,74 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora IMC</title>
+    <title>Política de Privacidade - Calculadora IMC</title>
     <style>
-        /* Estilos para deixar a página mais moderna */
         body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            text-align: center; 
+            font-family: 'Segoe UI', sans-serif; 
+            line-height: 1.6; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 40px 20px; 
+            color: #333; 
             background-color: #f4f7f6;
-            margin: 0;
-            padding: 20px;
-            color: #333;
         }
-
-        h1 {
-            color: #2c3e50;
-            margin-bottom: 20px;
-        }
-
-        /* Estilo do container do Iframe */
-        .iframe-container {
-            max-width: 600px;
-            margin: 0 auto;
+        .container {
             background: white;
-            padding: 10px;
+            padding: 30px;
             border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
-
-        iframe {
-            width: 100%;
-            height: 600px;
-            border: none;
-            border-radius: 8px;
-        }
-
-        footer { 
-            margin-top: 30px; 
-            font-size: 0.9em; 
-            color: #7f8c8d;
-        }
-
-        footer a {
-            color: #3498db;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+        p { margin-bottom: 20px; }
+        .voltar { display: inline-block; margin-top: 20px; color: #3498db; text-decoration: none; font-weight: bold; }
     </style>
 </head>
 <body>
+    <div class="container">
+        <h1>Política de Privacidade</h1>
+        
+        <p>Esta calculadora de IMC é uma ferramenta puramente <strong>informativa</strong>.</p>
+        
+        <p><strong>Isenção de Responsabilidade:</strong> Os resultados fornecidos por este aplicativo são baseados em cálculos matemáticos padrão e não devem ser interpretados como aconselhamento médico, diagnóstico ou tratamento. Sempre consulte um médico ou profissional de saúde qualificado para avaliar sua saúde física.</p>
+        
+        <p><strong>Dados do Usuário:</strong> Não coletamos, armazenamos ou compartilhamos nenhuma informação pessoal ou dados de saúde inseridos nesta calculadora.</p>
 
-    <h1>Calculadora de IMC</h1>
-
-    <div class="iframe-container">
-        <iframe 
-            src="https://script.google.com/macros/s/AKfycbxPlpjore9IC3s65oPA0twKbU6qdGdogEk7unoLDTA_a3gg-yt-P_dAa7oxHCk4pj5r/exec"
-            title="Calculadora de IMC">
-        </iframe>
+        <a href="index.html" class="voltar">← Voltar para a Calculadora</a>
     </div>
-
-    <footer>
-        <p>
-            <a href="https://madmooks.github.io/Calculadora-IMC/PoliticadePrivacidade.html" target="_blank">
-                Política de Privacidade
-            </a>
-        </p>
-    </footer>
-
 </body>
 </html>
