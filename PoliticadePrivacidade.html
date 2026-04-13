@@ -1,41 +1,133 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Privacidade - Calculadora IMC</title>
-    <style>
-        body { 
-            font-family: 'Segoe UI', sans-serif; 
-            line-height: 1.6; 
-            max-width: 800px; 
-            margin: 0 auto; 
-            padding: 40px 20px; 
-            color: #333; 
-            background-color: #f4f7f6;
-        }
-        .container {
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
-        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
-        p { margin-bottom: 20px; }
-        .voltar { display: inline-block; margin-top: 20px; color: #3498db; text-decoration: none; font-weight: bold; }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Política de Privacidade</h1>
-        
-        <p>Esta calculadora de IMC é uma ferramenta puramente <strong>informativa</strong>.</p>
-        
-        <p><strong>Isenção de Responsabilidade:</strong> Os resultados fornecidos por este aplicativo são baseados em cálculos matemáticos padrão e não devem ser interpretados como aconselhamento médico, diagnóstico ou tratamento. Sempre consulte um médico ou profissional de saúde qualificado para avaliar sua saúde física.</p>
-        
-        <p><strong>Dados do Usuário:</strong> Não coletamos, armazenamos ou compartilhamos nenhuma informação pessoal ou dados de saúde inseridos nesta calculadora.</p>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de Privacidade - Calculadora IMC</title>
 
-        <a href="index.html" class="voltar">← Voltar para a Calculadora</a>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Inter', sans-serif;
+        background: linear-gradient(135deg, #eef2f3, #dfe9f3);
+        color: #2c3e50;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 20px;
+    }
+
+    .container {
+        max-width: 720px;
+        width: 100%;
+        background: #ffffff;
+        padding: 40px 35px;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        animation: fadeIn 0.6s ease;
+    }
+
+    h1 {
+        font-size: 28px;
+        margin-bottom: 25px;
+        position: relative;
+    }
+
+    h1::after {
+        content: "";
+        display: block;
+        width: 60px;
+        height: 4px;
+        background: #3498db;
+        margin-top: 8px;
+        border-radius: 2px;
+    }
+
+    p {
+        margin-bottom: 18px;
+        line-height: 1.7;
+        color: #555;
+    }
+
+    strong {
+        color: #2c3e50;
+    }
+
+    .highlight {
+        background: #f1f7ff;
+        padding: 15px;
+        border-left: 4px solid #3498db;
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
+
+    .voltar {
+        display: inline-block;
+        margin-top: 25px;
+        padding: 12px 20px;
+        background: #3498db;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+
+    .voltar:hover {
+        background: #2980b9;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(15px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @media (max-width: 600px) {
+        .container {
+            padding: 25px 20px;
+        }
+
+        h1 {
+            font-size: 22px;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Política de Privacidade</h1>
+
+    <p>Esta calculadora de IMC é uma ferramenta puramente <strong>informativa</strong>.</p>
+
+    <div class="highlight">
+        <p><strong>Isenção de Responsabilidade:</strong> Os resultados fornecidos por este aplicativo são baseados em cálculos matemáticos padrão e não devem ser interpretados como aconselhamento médico, diagnóstico ou tratamento.</p>
+        <p>Sempre consulte um profissional de saúde qualificado para avaliar sua condição física.</p>
     </div>
+
+    <div class="highlight">
+        <p><strong>Dados do Usuário:</strong> Não coletamos, armazenamos ou compartilhamos nenhuma informação pessoal ou dados de saúde inseridos nesta calculadora.</p>
+    </div>
+
+    <a href="index.html" class="voltar">← Voltar para a Calculadora</a>
+</div>
+
 </body>
 </html>
