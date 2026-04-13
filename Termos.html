@@ -97,11 +97,16 @@
             uma consulta médica ou avaliação profissional.
         </p>
 
-        </div>
+        <!-- BOTÃO CORRIGIDO -->
+        <a class="btn" onclick="voltar()">Voltar para a Calculadora</a>
+    </div>
 
     <script>
-                       
-                // ou, se estiver no GitHub Pages:
+        function voltar() {
+            if (document.referrer && document.referrer !== "") {
+                window.history.back();
+            } else {
+                // 🔁 TROQUE SE NECESSÁRIO
                 window.location.href = "index.html";
             }
         }
