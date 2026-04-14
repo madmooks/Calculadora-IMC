@@ -1,85 +1,142 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora IMC</title>
-    <style>
-        /* Estilos para deixar a página mais moderna */
-        body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            text-align: center; 
-            background-color: #f4f7f6;
-            margin: 0;
-            padding: 20px;
-            color: #333;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MadMooks | Calculadora IMC</title>
 
-        h1 {
-            color: #2c3e50;
-            margin-bottom: 20px;
-        }
+<style>
+    /* RESET TOTAL DE MARGENS */
+    * {
+        box-sizing: border-box;
+    }
 
-        /* Estilo do container do Iframe */
-        .iframe-container {
-            max-width: 600px;
-            margin: 0 auto;
-            background: white;
-            padding: 10px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: #f5f6f8;
+        overflow-x: hidden; /* Evita barra de rolagem horizontal indesejada */
+    }
 
-        iframe {
-            width: 100%;
-            height: 600px;
-            border: none;
-            border-radius: 8px;
-        }
+    /* HEADER OCUPANDO 100% DA LARGURA */
+    .header {
+        position: relative;
+        width: 100vw; /* Força a largura total da janela */
+        height: 250px;
+        overflow: hidden;
+        background-color: #1a1a1a;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end; /* Alinha a logo à direita */
+    }
 
-        footer { 
-            margin-top: 30px; 
-            font-size: 0.9em; 
-            color: #7f8c8d;
-        }
+    /* IMAGEM DE FUNDO SEM ESPAÇOS */
+    .bg-img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
 
-        footer a {
-            color: #3498db;
-            text-decoration: none;
-            margin: 0 8px; /* Espaçamento entre links */
-        }
+    /* LOGO GRANDE NO LADO DIREITO */
+    .logo-container {
+        position: relative;
+        z-index: 10;
+        margin-right: 5%; /* Distância proporcional da borda direita */
+        display: flex;
+        align-items: center;
+    }
 
-        footer a:hover {
-            text-decoration: underline;
-        }
+    .logo {
+        height: 160px; /* Logo bem grande conforme solicitado */
+        width: auto;
+        filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.6));
+    }
 
-        .separator {
-            color: #bdc3c7;
+    /* CONTAINER DA CALCULADORA */
+    .container {
+        display: flex;
+        justify-content: center;
+        padding: 40px 10px;
+    }
+
+    .iframe-container {
+        width: 100%;
+        max-width: 580px;
+        background: white;
+        padding: 15px;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    iframe {
+        width: 100%;
+        height: 600px;
+        border: none;
+        border-radius: 8px;
+    }
+
+    footer {
+        text-align: center;
+        padding: 30px;
+        color: #888;
+    }
+
+    footer a {
+        color: #ff3b30;
+        text-decoration: none;
+        margin: 0 10px;
+        font-weight: bold;
+    }
+
+    /* AJUSTE PARA TELAS MENORES */
+    @media (max-width: 768px) {
+        .header {
+            height: 180px;
         }
-    </style>
+        .logo {
+            height: 100px;
+        }
+    }
+</style>
 </head>
+
 <body>
 
-    <h1>Calculadora de IMC</h1>
+<header class="header">
+    <img 
+        src="https://raw.githubusercontent.com/madmooks/Calculadora-IMC/main/header.png"
+        class="bg-img"
+        alt="Background MadMooks"
+    >
 
+   
+</header>
+
+<main class="container">
     <div class="iframe-container">
         <iframe 
             src="https://script.google.com/macros/s/AKfycbwT1hIcbafKnFjlImPhuigifVPSUdDUrtp_AmtZyoeB2xMhiKCzcIaeDegQF59R-JSV/exec"
             title="Calculadora de IMC">
         </iframe>
     </div>
+</main>
 
-    <footer>
-        <p>
-            <a href="https://madmooks.github.io/Calculadora-IMC/PoliticadePrivacidade.html" target="_blank">
-                Política de Privacidade
-            </a>
-            <span class="separator">|</span>
-            <a href="https://madmooks.github.io/Calculadora-IMC/Termos.html" target="_blank">
-                Termos de Uso
-            </a>
-        </p>
-    </footer>
+<footer>
+    <p>
+        <a href="https://madmooks.github.io/Calculadora-IMC/PoliticadePrivacidade.html" target="_blank">
+            Política de Privacidade
+        </a>
+        |
+        <a href="https://madmooks.github.io/Calculadora-IMC/Termos.html" target="_blank">
+            Termos de Uso
+        </a>
+    </p>
+</footer>
 
 </body>
 </html>
